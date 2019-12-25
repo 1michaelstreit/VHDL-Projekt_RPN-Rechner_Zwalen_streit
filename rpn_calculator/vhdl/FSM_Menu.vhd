@@ -91,21 +91,46 @@ begin
 			when S_Register =>
 				state_next <= S_Idle;
 				null;
-			/*when S_SignMagnitude =>
+				/*when S_SignMagnitude =>
 				state_next <= S_Idle;
 				null;*/
 
 		end case;
 	end process NSL;
-	
+
 	Adder : entity work.Adder
+		generic map(
+			NBIT => NBIT
+		)
+		port map(
+			a => s_data_stack,
+			b => s_data_reg,
+			c => s_data_result);
+
+	Subtractor : entity work.Subtractor
+		generic map(
+			NBIT => NBIT
+		)
+		port map(
+			a => s_data_stack,
+			b => s_data_reg,
+			c => s_data_result);
+
+	Multiplier : entity work.Divider
+		generic map(
+			NBIT => NBIT
+		)
 		port map(
 			a => s_data_stack,
 			b => s_data_reg,
 			c => s_data_result);
 			
-	Subtractor : entity work.Subtractor
+	Divider : entity work.Divider
+		generic map(
+			NBIT => NBIT
+		)
 		port map(
+			errorsig => error,
 			a => s_data_stack,
 			b => s_data_reg,
 			c => s_data_result);
@@ -113,27 +138,27 @@ begin
 
 	Shift_Register : entity work.Shift_Register
 		port map(
-			clk => clk, 
-			rst => rst, 
-			data_in => data_in_button, 
+			clk => clk,
+			rst => rst,
+			data_in => data_in_button,
 			data_out => s_data_reg);
 	/*Signed_Magnitude : entity work.Signed_Magnitude
 		port map(
  			data_reg => s_data_reg,
 			data_signedMagnitude => s_data_sigMag);*/
-			
+
 	Stack : entity work.stack
 		generic map(
 			DEPTH => 9,
-			WIDTHE => 12
+			WIDTHE => NBIT
 		)
 		port map (
-			Clk => clk, Reset => rst, 
-			Data_In => data_out, 
-			PUSH => PUSH, 
+			Clk => clk, Reset => rst,
+			Data_In => data_out,
+			PUSH => PUSH,
 			POP => POP, -- input
-			Data_Out => s_data_stack, 
-			Stack_Full => stack_full, 
+			Data_Out => s_data_stack,
+			Stack_Full => stack_full,
 			Stack_Empty => stack_empty); --output
 		
 
@@ -142,8 +167,8 @@ begin
 	OL :
 		
 	data_out	<= s_data_out when state_reg = S_Idle;
-	
-	data_out	<= s_data_stack when state_reg = S_Stack; 
+
+	data_out	<= s_data_stack when state_reg = S_Stack;
 
 	error 		<= s_error when state_reg = S_Division;
 	

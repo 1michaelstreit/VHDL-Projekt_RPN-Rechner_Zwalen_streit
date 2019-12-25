@@ -13,28 +13,31 @@ end entity Adder;
 architecture RTL of Adder is
 	signal s_c : unsigned(NBIT-1 downto 0) := (others => '0');
 	signal sign_a, sign_b : std_logic;
+	signal abs_a, abs_b : std_logic_vector(NBIT-2 downto 0);
 begin
 	sign_a <= a(NBIT-1);
 	sign_b <= b(NBIT-1);
+	abs_a <= a(NBIT-2 downto 0);
+	abs_b <= b(NBIT-2 downto 0);
 
-	ADD : process (a,b, sign_a, sign_b) is
+	ADD : process (abs_a,abs_b, sign_a, sign_b) is
 	begin
 		if sign_a = sign_b then
 			
-			s_c(NBIT-2 downto 0) <= unsigned(a(NBIT-2 downto 0)) + unsigned(b(NBIT-2 downto 0));
+			s_c(NBIT-2 downto 0) <= unsigned(abs_a) + unsigned(abs_b);
 			s_c(NBIT-1) <= sign_a;
 			
-		elsif a(NBIT-2 downto 0) >= b(NBIT-2 downto 0) then
+		elsif abs_a >= abs_b then
 			
-			s_c(NBIT-2 downto 0) <= unsigned(a(NBIT-2 downto 0)) - unsigned(b(NBIT-2 downto 0));
+			s_c(NBIT-2 downto 0) <= unsigned(abs_a) - unsigned(abs_b);
 
 			if sign_a = '0' then
 				s_c(NBIT-1) <= '0';
 			else
 				s_c(NBIT-1) <= '1';
 			end if;
-		elsif a(NBIT-2 downto 0) < b(NBIT-2 downto 0) then
-			s_c(NBIT-2 downto 0) <= unsigned(b(NBIT-2 downto 0)) - unsigned(a(NBIT-2 downto 0));
+		elsif abs_a < abs_b then
+			s_c(NBIT-2 downto 0) <= unsigned(abs_b) - unsigned(abs_a);
 			
 			if sign_b = '0' then
 				s_c(NBIT-1) <= '0';
