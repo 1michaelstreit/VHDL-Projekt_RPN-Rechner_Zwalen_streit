@@ -1,0 +1,27 @@
+|rpn_calculator_top
+clock => keypad:Keypad_1.clk
+reset => keypad:Keypad_1.por
+buttons[0] => keypad:Keypad_1.buttons[0]
+buttons[1] => keypad:Keypad_1.buttons[1]
+buttons[2] => keypad:Keypad_1.buttons[2]
+buttons[3] => keypad:Keypad_1.buttons[3]
+
+
+|rpn_calculator_top|keypad:Keypad_1
+clk => state_reg~1.DATAIN
+por => state_reg~3.DATAIN
+column[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+column[1] <= column[1].DB_MAX_OUTPUT_PORT_TYPE
+column[2] <= column[2].DB_MAX_OUTPUT_PORT_TYPE
+column[3] <= column[3].DB_MAX_OUTPUT_PORT_TYPE
+buttons[0] => r_value[0].DATAB
+buttons[1] => r_value[1].DATAB
+buttons[2] => r_value[2].DATAB
+buttons[3] => r_value[3].DATAB
+strobe <= strobe.DB_MAX_OUTPUT_PORT_TYPE
+value[0] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+
+

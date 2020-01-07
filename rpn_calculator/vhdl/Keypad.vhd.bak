@@ -18,16 +18,15 @@ entity keypad is
         buttons		    : in  std_logic_vector(3 downto 0);
         strobe          : out std_logic;
 		value			: out std_logic_vector(3 downto 0));
-end entity keypad;
+end keypad;
 
 architecture rtl of keypad is
 	type states is (INIT, INIT_COL1, INIT_COL2, INIT_COL3, INIT_COL4, 
 		READ_COL1, READ_COL2, READ_COL3, READ_COL4, DATA_OUT);
-	signal r_column					: integer;
-	signal r_value					: std_logic_vector (3 downto 0);
-	signal state_reg, state_next	: states;  -- state register
-	signal value_out				: std_logic_vector(3 downto 0);
-	signal strobe_buffer			: std_logic;
+	signal r_column : integer;
+	signal r_value : std_logic_vector (3 downto 0);
+	signal state_reg, state_next : states;  -- state register
+	signal value_out : std_logic_vector(3 downto 0);
 	
 begin
   REG: process (clk, por) is
@@ -83,12 +82,12 @@ begin
 -- Output logic of the FSM
   OL: process (state_reg, r_value) is
   begin  -- process
-    strobe_buffer  <= '0';
+    strobe  <= '0';
     value_out <= x"0";
     r_value <= "1111";
     case state_reg is
       when INIT =>
-		strobe_buffer  <= '0';
+		strobe  <= '0';
       when INIT_COL1 =>
     	r_value <= buttons;
       when READ_COL1 =>
@@ -101,8 +100,8 @@ begin
 		elsif r_value = "1110" then
 			value_out	<= x"0";
 		end if;
-		if r_value /= "1111" and strobe_buffer = '0' then
-			strobe_buffer <= '1';
+		if r_value /= "1111" and strobe = '0' then
+			strobe <= '1';
 		else strobe <= '0';
 		end if;
       when INIT_COL2 =>
@@ -117,9 +116,9 @@ begin
 		elsif r_value = "1110" then
 			value_out	<= x"F";
 		end if;
-		if r_value /= "1111" and strobe_buffer = '0' then
-			strobe_buffer <= '1';
-		else strobe_buffer <= '0';
+		if r_value /= "1111" and strobe = '0' then
+			strobe <= '1';
+		else strobe <= '0';
 		end if;
       when INIT_COL3 =>
     	r_value <= buttons;
@@ -133,9 +132,9 @@ begin
 		elsif r_value = "1110" then
 			value_out	<= x"E";
 		end if;
-		if r_value /= "1111" and strobe_buffer = '0' then
-			strobe_buffer <= '1';
-		else strobe_buffer <= '0';
+		if r_value /= "1111" and strobe = '0' then
+			strobe <= '1';
+		else strobe <= '0';
 		end if;
       when INIT_COL4 =>
     	r_value <= buttons;
@@ -149,17 +148,16 @@ begin
 		elsif r_value = "1110" then
 			value_out	<= x"D";
 		end if;
-		if r_value /= "1111" and strobe_buffer = '0' then
-			strobe_buffer <= '1';
-		else strobe_buffer <= '0';
+		if r_value /= "1111" and strobe = '0' then
+			strobe <= '1';
+		else strobe <= '0';
 		end if;
 	  when DATA_OUT =>
-		if strobe_buffer = '1' then
+		if strobe = '1' then
 			value <= value_out;
 		end if;
       when others => null;
     end case;
-    strobe <= strobe_buffer;
 	value <= value_out;
   end process OL;
-end architecture rtl;
+end rtl;
