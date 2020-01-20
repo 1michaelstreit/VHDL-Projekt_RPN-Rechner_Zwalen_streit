@@ -142,10 +142,6 @@ begin
 			rst => rst,
 			data_in => data_in_button,
 			data_out => s_data_reg);
-	/*Signed_Magnitude : entity work.Signed_Magnitude
-		port map(
- 			data_reg => s_data_reg,
-			data_signedMagnitude => s_data_sigMag);*/
 
 	Stack : entity work.stack
 		generic map(
