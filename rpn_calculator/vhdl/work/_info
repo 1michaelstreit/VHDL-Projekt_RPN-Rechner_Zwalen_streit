@@ -119,270 +119,64 @@ R21
 !i113 1
 R13
 R14
-Cd_divider_tb_bench_cfg
-eDivider_tb
-R24
-Z25 DEx4 work 7 divider 0 22 5XO?;SPfN=;UHcUS_ULkJ3
-R3
-DAx4 work 10 divider_tb 5 bench 22 h30jM6X_0eFb4VCCb4<Uz0
-R4
-R5
-Z26 DEx4 work 10 divider_tb 0 22 j;7IRP?DzezlT7>4XTCj33
-Z27 w1577270385
-R0
-Z28 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider_tb.vhd
-Z29 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider_tb.vhd
-l0
-L62
-V9_TNYl?d=iZ@VfXV`T6961
-!s100 PYHjR4=en<b7>7YASjeUm2
-R8
-32
-Z30 !s110 1577270418
-!i10b 0
-Z31 !s108 1577270418.000000
-Z32 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider_tb.vhd|
-Z33 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider_tb.vhd|
-!i113 1
-R13
-R14
-Cd_multiplier_tb_bench_cfg
-eMultiplier_tb
-R24
-Z34 DEx4 work 10 multiplier 0 22 aVm654in:j3jhGWahB;fO1
-R3
-DAx4 work 13 multiplier_tb 5 bench 22 U?HnCm6Nfi^XjPeUkLA1P2
-R4
-R5
-Z35 DEx4 work 13 multiplier_tb 0 22 WASY=B_QiU9Pa]03BNM?;3
-Z36 w1577265816
-R0
-Z37 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier_tb.vhd
-Z38 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier_tb.vhd
-l0
-L65
-V0;dUnGJ;MK84k`fMh585O3
-!s100 ei[KmhMn4LXg7?:SXnRSA3
-R8
-32
-Z39 !s110 1577265820
-!i10b 0
-Z40 !s108 1577265820.000000
-Z41 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier_tb.vhd|
-Z42 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier_tb.vhd|
-!i113 1
-R13
-R14
-Cd_subtractor_tb_bench_cfg
-esubtractor_tb
-R24
-R22
-R3
-DAx4 work 13 subtractor_tb 5 bench 22 ASOK9l]I;H28Dm<8PR;Z02
-R4
-R5
-Z43 DEx4 work 13 subtractor_tb 0 22 7jYkMW2]4Oi`HeK9Y9a5Q2
-Z44 w1577115342
-R0
-Z45 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor_tb.vhd
-Z46 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor_tb.vhd
-l0
-L62
-V]AKFKbNkIz2S@`<OE^zWU3
-!s100 0YO;kCUOn5:370OkoVOR71
-R8
-32
-Z47 !s110 1577116367
-!i10b 0
-Z48 !s108 1577116366.000000
-Z49 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor_tb.vhd|
-Z50 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor_tb.vhd|
-!i113 1
-R13
-R14
-Edivider
-Z51 w1577270142
+Ekeypad
+Z24 w1578414787
 R3
 R4
 R5
-R0
-Z52 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider.vhd
-Z53 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider.vhd
+Z25 dC:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl
+Z26 8Keypad.vhd
+Z27 FKeypad.vhd
 l0
-L5
-V5XO?;SPfN=;UHcUS_ULkJ3
-!s100 AIJNQSK<XFe;fiIMz6OcZ2
+L14
+VHCf@`GjXczzHG60og5dhY0
+!s100 oNna9V]M;i1i;J7=l2YH52
 R8
 32
-Z54 !s110 1577270415
+Z28 !s110 1578414791
 !i10b 1
-Z55 !s108 1577270415.000000
-Z56 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider.vhd|
-Z57 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider.vhd|
+Z29 !s108 1578414791.000000
+Z30 !s90 -reportprogress|300|Keypad.vhd|
+Z31 !s107 Keypad.vhd|
 !i113 1
-R13
-R14
-Abehave_unsigned
-R3
-R4
-R5
-R25
-l20
-L16
-VPnalagD^?1Z0ZE;cULM=>1
-!s100 lY5P8jOQd2cF^mI1Vl=GT2
-R8
-32
-R54
-!i10b 1
-R55
-R56
-R57
-!i113 1
-R13
-R14
-Edivider_tb
-R27
-R4
-R5
-R0
-R28
-R29
-l0
-L6
-Vj;7IRP?DzezlT7>4XTCj33
-!s100 ebXiPTLIMnZT3aGEmn7ib1
-R8
-32
-R30
-!i10b 1
-R31
-R32
-R33
-!i113 1
-R13
-R14
-Abench
-R3
-R25
-R4
-R5
-R26
-l21
-L12
-Vh30jM6X_0eFb4VCCb4<Uz0
-!s100 gN`?gYL^ZFEIREQR[eiSg3
-R8
-32
-R30
-!i10b 1
-R31
-R32
-R33
-!i113 1
-R13
-R14
-Emultiplier
-Z58 w1577271093
-R3
-R4
-R5
-R0
-Z59 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier.vhd
-Z60 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier.vhd
-l0
-L5
-VaVm654in:j3jhGWahB;fO1
-!s100 :fh_H@JHiH3Xm8KE4HWSo3
-R8
-32
-Z61 !s110 1577271110
-!i10b 1
-Z62 !s108 1577271110.000000
-Z63 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier.vhd|
-Z64 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier.vhd|
-!i113 1
-R13
 R14
 Artl
 R3
 R4
 R5
-R34
-l18
-L13
-VV6Dk@2C=h6]IKQQEg@kKM1
-!s100 7L;DXDjDkWbPFP:lbO4Z70
+DEx4 work 6 keypad 0 22 HCf@`GjXczzHG60og5dhY0
+l32
+L23
+V910Zh7`bBKA4z=WmWG>X@2
+!s100 2N[28Ob:@VfJF_;:Od_6E3
 R8
 32
-R61
+R28
 !i10b 1
-R62
-R63
-R64
+R29
+R30
+R31
 !i113 1
-R13
-R14
-Emultiplier_tb
-R36
-R4
-R5
-R0
-R37
-R38
-l0
-L6
-VWASY=B_QiU9Pa]03BNM?;3
-!s100 H2Zc`P1J]`4ogJYVgc4Wh0
-R8
-32
-R39
-!i10b 1
-R40
-R41
-R42
-!i113 1
-R13
-R14
-Abench
-R3
-R34
-R4
-R5
-R35
-l21
-L12
-VU?HnCm6Nfi^XjPeUkLA1P2
-!s100 G9VQ^l7m3k;>DU9`aNeHL2
-R8
-32
-R39
-!i10b 1
-R40
-R41
-R42
-!i113 1
-R13
 R14
 Esubtractor
-Z65 w1577110555
+Z32 w1577110555
 R3
 R4
 R5
 R0
-Z66 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd
-Z67 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd
+Z33 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd
+Z34 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd
 l0
 L5
 V[E@IWN>Af_z7JOJK83^nL2
 !s100 FJ<UgUA>kC=lET_9nm@7W0
 R8
 32
-Z68 !s110 1577116366
+Z35 !s110 1577110570
 !i10b 1
-R48
-Z69 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd|
-Z70 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd|
+Z36 !s108 1577110570.000000
+Z37 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd|
+Z38 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd|
 !i113 1
 R13
 R14
@@ -397,11 +191,11 @@ VT:Da]UCYIDEWj>gHd]`Yj2
 !s100 jkjGL?eMY4QeeRj=IPF1N1
 R8
 32
-R68
+R35
 !i10b 1
-R48
-R69
-R70
+R36
+R37
+R38
 !i113 1
 R13
 R14
