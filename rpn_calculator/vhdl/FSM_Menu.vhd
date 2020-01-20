@@ -20,6 +20,7 @@ architecture RTL of FSM_Menu is
 	signal stack_full, stack_empty	: std_logic;
 	signal PUSH, POP, s_error	:std_logic;
 	signal s_data_stack, s_data_out, s_data_result, s_data_in_button, s_data_reg : std_logic_vector(NBIT-1 downto 0);
+	signal s_add_en, s_sub_en, s_Mul_en, s_Div_en, s_Sig_en, s_Reg_en, s_Res_en :std_logic;
 begin
 
 	REG: process(clk, rst) is
@@ -43,10 +44,13 @@ begin
 			when S_Idle =>
 				if strobe_newButton ='1' and data_in_button < x"A" then
 					state_next <= S_Register;
+					s_add_en <= '0';
 				end if;
 
 				if strobe_newButton ='1' and data_in_button = x"A" then
 					state_next <= S_Addition;
+					POP <= '1';
+
 				end if;
 
 				if strobe_newButton ='1' and data_in_button = x"B" then
@@ -72,6 +76,7 @@ begin
 
 			when S_Addition =>
 				state_next <= S_Idle;
+				s_add_en <= '1';
 				null;
 			when S_Subtraction =>
 				state_next <= S_Idle;
@@ -97,12 +102,13 @@ begin
 
 		end case;
 	end process NSL;
-
+	
 	Adder : entity work.Adder
 		generic map(
 			NBIT => NBIT
 		)
 		port map(
+			en => s_add_en,
 			a => s_data_stack,
 			b => s_data_reg,
 			c => s_data_result);
@@ -137,11 +143,18 @@ begin
 	
 
 	Shift_Register : entity work.Shift_Register
+		generic map(
+			NBIT => NBIT
+		)
 		port map(
+			s_Res_en => s_Res_en,
+			s_Reg_en => s_Reg_en,
 			clk => clk,
 			rst => rst,
-			data_in => data_in_button,
+			data_in_7Seg => data_in_button,
+			data_in_Result => s_data_result, 
 			data_out => s_data_reg);
+
 
 	Stack : entity work.stack
 		generic map(

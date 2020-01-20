@@ -14,6 +14,7 @@ architecture bench of adder_tb is
 	signal clk : std_logic := '0';
 	signal a,b   : std_logic_vector(11 downto 0);
 	signal c	: std_logic_vector(11 downto 0);
+	signal en : std_logic := '0';
 
 	signal tb_finished : boolean := false;
 
@@ -22,6 +23,7 @@ begin  -- architecture bench
 
 	ADD: entity work.Adder
 		port map (
+			en => en,
 			a => a,
 			b => b,
 			c => c);
