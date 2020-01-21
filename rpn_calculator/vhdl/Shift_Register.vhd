@@ -7,7 +7,8 @@ entity Shift_Register is
 	port(
 		clk : in std_logic;
 		rst : in std_logic;
-		s_Res_en, s_Reg_en:in std_logic;
+		New_Number_Input :in std_logic;
+		s_forward_en, s_shift_en:in std_logic;
 		data_in_7Seg :in std_logic_vector(3 downto 0);
 		data_in_Result: in std_logic_vector(NBIT-1 downto 0);
 		data_out : out std_logic_vector(NBIT-1 downto 0)
@@ -16,31 +17,43 @@ end entity Shift_Register;
 
 architecture RTL of Shift_Register is
 	signal r0_data, r1_data, r2_data : std_logic_vector(3 downto 0);
-	signal s_data_out : std_logic_vector(11 downto 0);
+	signal s_data_out : std_logic_vector(NBIT-1 downto 0);
 begin
 
 	process(clk, rst) is
 	begin
+		if New_Number_Input = '1' then
+			r0_data <= (others => '0');
+			r1_data <= (others => '0');
+			r2_data <= (others => '0');
+		end if;
+
 		if rst = '1' then
 			r0_data <= (others => '0');
 			r1_data <= (others => '0');
 			r2_data <= (others => '0');
 		elsif rising_edge(clk) then
-			r2_data <= r1_data;
-			r1_data <= r0_data;
-			r0_data <= data_in_7Seg;
+			if s_shift_en = '1' then
+				r2_data <= r1_data;
+				r1_data <= r0_data;
+				r0_data <= data_in_7Seg;
+			end if;
 		end if;
+		if s_shift_en = '1' then
 			s_data_out(3 downto 0) <= r0_data ;
-			s_data_out <= std_logic_vector(unsigned(s_data_out) + unsigned(r1_data) * 10); 
-			s_data_out <= std_logic_vector(unsigned(s_data_out) + unsigned(r2_data)*100); 
+			s_data_out <= std_logic_vector(unsigned(s_data_out) + unsigned(r1_data) * 10);
+			s_data_out <= std_logic_vector(unsigned(s_data_out) + unsigned(r2_data)*100);
+		end if;
+		
+		if s_forward_en = '1' then
+			s_data_out <= data_in_Result;
+		end if;
 	end process;
 	
 		
 	OL :
 	
-	data_out(10 downto 0) <= s_data_out(10 downto 0) when s_Reg_en = '1';
-	data_out(11) <= '0' when s_Reg_en = '1';
-	
-	data_out <= data_in_Result when s_Res_en = '1';
+	data_out <= s_data_out;
+
 
 end architecture RTL;

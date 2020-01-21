@@ -16,6 +16,7 @@ architecture bench of lifo_stack_tb is
 	signal PUSH,POP	: std_logic :='0';
 	signal stack_full, stack_empty : std_logic := '0';
 	signal SP_debugg :integer;
+	signal en_stack : std_logic := '0';
 
 	signal tb_finished : boolean := false;
 
@@ -25,6 +26,7 @@ begin  -- architecture bench
 	ADD: entity work.stack
 		port map (
 			Clk => clk, Reset => rst,
+			Enable => en_stack,
 			Data_In => s_data_reg,
 			PUSH => PUSH,
 			POP => POP, -- input
@@ -39,15 +41,17 @@ begin  -- architecture bench
 
 	STIMULI: process
 	begin
+		rst <= '1';
 		wait until clk = '1';
+		rst <= '0';
 		wait until clk = '1';
+		en_stack <= '1';
 		wait until clk = '1';
 		s_data_reg <= "000000000001";
 		wait until clk = '1';
 		PUSH <= '1';
 		wait until clk = '1';
 		PUSH <= '0';
-		wait until clk = '1';
 		s_data_reg <= "100000000010";
 		wait until clk = '1';
 		PUSH <= '1';
@@ -59,6 +63,41 @@ begin  -- architecture bench
 		wait until clk = '1';
 		Push <= '0';
 		s_data_reg <= "100000000100";
+		wait until clk = '1';
+		PUSH <= '1';
+		wait until clk = '1';
+		Push <= '0';
+		s_data_reg <= "100000000101";
+		wait until clk = '1';
+		PUSH <= '1';
+		wait until clk = '1';
+		Push <= '0';
+		s_data_reg <= "100000000110";
+		wait until clk = '1';
+		PUSH <= '1';
+		wait until clk = '1';
+		Push <= '0';
+		s_data_reg <= "100000000111";
+		wait until clk = '1';
+		PUSH <= '1';
+		wait until clk = '1';
+		Push <= '0';
+		s_data_reg <= "100000001000";
+		wait until clk = '1';
+		PUSH <= '1';
+		wait until clk = '1';
+		Push <= '0';
+		s_data_reg <= "100000001001";
+		wait until clk = '1';
+		PUSH <= '1';
+		wait until clk = '1';
+		Push <= '0';
+		s_data_reg <= "100000001010";
+		wait until clk = '1';
+		PUSH <= '1';
+		wait until clk = '1';
+		Push <= '0';
+		s_data_reg <= "100000001011";
 		wait until clk = '1';
 		PUSH <= '1';
 		wait until clk = '1';

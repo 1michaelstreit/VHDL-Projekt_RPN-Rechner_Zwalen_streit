@@ -11,25 +11,25 @@ Z0 dC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/si
 Cd_stack_tb_bench_cfg
 elifo_stack_tb
 abench
-Z1 DEx4 work 5 stack 0 22 87^^H_GKc6G@:cXPOO5Em1
+Z1 DEx4 work 5 stack 0 22 MThzUIceH]5GgPz^>CW^D1
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-DAx4 work 13 lifo_stack_tb 5 bench 22 <=2TW`Ie5Ch?f39aJf1UP0
+DAx4 work 13 lifo_stack_tb 5 bench 22 6TV>hhoM=lHa6nNnU]c801
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z5 DEx4 work 13 lifo_stack_tb 0 22 eakgLk87j5@oSm=9PgbO32
-Z6 w1579600096
+Z6 w1579613474
 R0
 Z7 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd
 Z8 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd
 l0
-L93
-V[MDcQVUa=lz3COEYo1id`3
-!s100 53>OlCdQnz02?[k10[^[]3
+L132
+Vzco6ZOJjWzJYZG]S0PhQ10
+!s100 F^Bmd39:kdni?3B<SAPSR2
 Z9 OV;C;10.5b;63
 32
-Z10 !s110 1579600159
+Z10 !s110 1579613669
 !i10b 0
-Z11 !s108 1579600159.000000
+Z11 !s108 1579613669.000000
 Z12 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd|
 Z13 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd|
 !i113 1
@@ -62,10 +62,10 @@ R1
 R3
 R4
 R5
-l23
+l24
 L12
-V<=2TW`Ie5Ch?f39aJf1UP0
-!s100 `VLXoLYozU4ziCk;:=ZTN1
+V6TV>hhoM=lHa6nNnU]c801
+!s100 [^dKOzi4FMCIkE7aB>d7[1
 R9
 32
 R10
@@ -77,24 +77,24 @@ R13
 R14
 R15
 Estack
-R6
+Z16 w1579613651
 R2
 R3
 R4
 R0
-Z16 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
-Z17 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
+Z17 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
+Z18 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
 l0
 L5
-V87^^H_GKc6G@:cXPOO5Em1
-!s100 cG7;IcU0T1CeP8;MXjj@Q3
+VMThzUIceH]5GgPz^>CW^D1
+!s100 cBo0DWc4>743FhW52nSJE2
 R9
 32
-R10
+Z19 !s110 1579613671
 !i10b 1
-R11
-Z18 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
-Z19 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
+Z20 !s108 1579613671.000000
+Z21 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
+Z22 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
 !i113 1
 R14
 R15
@@ -104,16 +104,16 @@ R3
 R4
 R1
 l33
-L21
-Z20 ViEX@G[FD9FfNzm=E=@d2c1
-Z21 !s100 gDRm:gl7L2l?G<^;Wd2<30
+L22
+Z23 VbR3WM68QcRRNQhQGXTcWO0
+Z24 !s100 5So6:<UJ`kRN3:<ET0SO=2
 R9
 32
-R10
-!i10b 1
-R11
-R18
 R19
+!i10b 1
+R20
+R21
+R22
 !i113 1
 R14
 R15
