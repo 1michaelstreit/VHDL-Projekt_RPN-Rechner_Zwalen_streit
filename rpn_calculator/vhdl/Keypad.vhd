@@ -14,152 +14,142 @@ use ieee.numeric_std.all;
 entity keypad is
     port (
         clk, por		: in  std_logic;
-		column			: out std_logic_vector(3 downto 0);
-        buttons		    : in  std_logic_vector(3 downto 0);
-        strobe          : out std_logic;
-		value			: out std_logic_vector(3 downto 0));
+        row			    : in  std_logic_vector(3 downto 0);
+        col				: out  std_logic_vector(3 downto 0);
+		output_value	: out std_logic_vector(4 downto 0));
 end entity keypad;
 
 architecture rtl of keypad is
 	type states is (INIT, INIT_COL1, INIT_COL2, INIT_COL3, INIT_COL4, 
-		READ_COL1, READ_COL2, READ_COL3, READ_COL4, DATA_OUT);
-	signal r_column					: integer;
-	signal r_value					: std_logic_vector (3 downto 0);
-	signal state_reg, state_next	: states;  -- state register
-	signal value_out				: std_logic_vector(3 downto 0);
-	signal strobe_buffer			: std_logic;
+		READ_COL1, READ_COL2, READ_COL3, READ_COL4, DATA_OUT);			-- FSM states
+	signal r_row					: std_logic_vector (3 downto 0);
+	signal state_reg, state_next	: states;
+	signal value					: std_logic_vector(3 downto 0);
+	signal strobe					: std_logic;
 	
 begin
   REG: process (clk, por) is
   begin  -- process REG
-    if por = '1' then                 -- asynchronous reset when active high
+    if por = '1' then                 									-- asynchronous reset when active high
       state_reg <= INIT;
-    elsif clk'event and clk = '1' then  -- rising edge clock
+    elsif clk'event and clk = '1' then  								-- rising edge clock
       state_reg <= state_next;
     end if;
   end process REG;
  
  -- Next state logic for the FSM
-  NSL: process (state_reg) is
+  NSL: process (state_reg, r_row, row) is
   begin  -- process NSL
-  	state_next <= state_reg;
+  	-- state_next <= state_reg;
   	case state_reg is
   	when INIT =>
+  		strobe <= '0';
+  		col <= "1111";
   		state_next <= INIT_COL1;
   	when INIT_COL1 =>
+  		col <= "1110";
   		state_next <= READ_COL1;
   	when READ_COL1 =>
+  		r_row <= row;
+  		case r_row is
+  			when "1110" =>
+  				value <= x"1";
+				strobe <= '1';
+  			when "1101" =>
+				value <= x"4";
+				strobe <= '1';
+			when "1011" =>
+				value <= x"7";
+				strobe <= '1';
+			when "0111" =>
+				value <= x"0";
+				strobe <= '1';
+			when others => null;
+		end case;
   		state_next <= INIT_COL2;
   	when INIT_COL2 =>
+  		col <= "1101";
   		state_next <= READ_COL2;
   	when READ_COL2 =>
+  		r_row <= row;
+  		if strobe = '0' then
+	  		case r_row is
+  				when "1110" =>
+					value <= x"2";
+					strobe <= '1';
+	  			when "1101" =>
+					value <= x"5";
+					strobe <= '1';
+  				when "1011" =>
+					value <= x"8";
+					strobe <= '1';
+  				when "0111"  =>
+					value <= x"F";
+					strobe <= '1';
+				when others => null;
+			end case;
+		end if;
   		state_next <= INIT_COL3;
   	when INIT_COL3 =>
+  		col <= "1011";
   		state_next <= READ_COL3;
   	when READ_COL3 =>
+  		r_row <= row;
+  		if strobe = '0' then
+    		case r_row is
+  				when "1110" =>
+					value <= x"3";
+					strobe <= '1';
+  				when "1101" =>
+					value <= x"6";
+					strobe <= '1';
+  				when "1011" =>
+					value <= x"9";
+					strobe <= '1';
+  				when "0111" =>
+					value <= x"E";
+					strobe <= '1';
+				when others => null;
+			end case;
+		end if;
   		state_next <= INIT_COL4;
   	when INIT_COL4 =>
+  		col <= "0111";
   		state_next <= READ_COL4;
   	when READ_COL4 =>
-  		state_next <= DATA_OUT;
+  		r_row <= row;
+  		if strobe = '0' then
+    		case r_row is
+  				when "1110" =>
+					value <= x"A";
+					strobe <= '1';
+  				when "1101" =>
+					value <= x"B";
+					strobe <= '1';
+  				when "1011" =>
+					value <= x"C";
+					strobe <= '1';
+  				when "0111" =>
+					value <= x"D";
+					strobe <= '1';
+				when others => null;
+			end case;
+		end if;
+		state_next <= DATA_OUT;
   	when DATA_OUT =>
   		state_next <= INIT;  		
   	end case;
-  		
-  		
---  	if state_reg then
---  	column_loop : 
---  		for i in 3 downto 0 loop
---  			if button /= "1111" then
---  				r_column <= i;
---  				r_value <= button;
---  				exit column_loop;
---  			end if;
---  		end loop;
---  	end if;
 
   end process NSL;
 
 -- Output logic of the FSM
-  OL: process (state_reg, r_value) is
+  OL: process (state_reg, strobe, value) is
   begin  -- process
-    strobe_buffer  <= '0';
-    value_out <= x"0";
-    r_value <= "1111";
     case state_reg is
-      when INIT =>
-		strobe_buffer  <= '0';
-      when INIT_COL1 =>
-    	r_value <= buttons;
-      when READ_COL1 =>
-    	if r_value = "0111" then
-    		value_out	<= x"1";
-		elsif r_value = "1011" then
-			value_out	<= x"4";
-		elsif r_value = "1101" then
-			value_out	<= x"7";
-		elsif r_value = "1110" then
-			value_out	<= x"0";
-		end if;
-		if r_value /= "1111" and strobe_buffer = '0' then
-			strobe_buffer <= '1';
-		else strobe <= '0';
-		end if;
-      when INIT_COL2 =>
-    	r_value <= buttons;
-      when READ_COL2 =>
-		if r_value = "0111" then
-			value_out	<= x"2";
-		elsif r_value = "1011" then
-			value_out	<= x"5";
-		elsif r_value = "1101" then
-			value_out	<= x"8";
-		elsif r_value = "1110" then
-			value_out	<= x"F";
-		end if;
-		if r_value /= "1111" and strobe_buffer = '0' then
-			strobe_buffer <= '1';
-		else strobe_buffer <= '0';
-		end if;
-      when INIT_COL3 =>
-    	r_value <= buttons;
-      when READ_COL3 =>
-		if r_value = "0111" then
-			value_out	<= x"3";
-		elsif r_value = "1011" then
-			value_out	<= x"6";
-		elsif r_value = "1101" then
-			value_out	<= x"9";
-		elsif r_value = "1110" then
-			value_out	<= x"E";
-		end if;
-		if r_value /= "1111" and strobe_buffer = '0' then
-			strobe_buffer <= '1';
-		else strobe_buffer <= '0';
-		end if;
-      when INIT_COL4 =>
-    	r_value <= buttons;
-      when READ_COL4 =>
-		if r_value = "0111" then
-			value_out	<= x"A";
-		elsif r_value = "1011" then
-			value_out	<= x"B";
-		elsif r_value = "1101" then
-			value_out	<= x"C";
-		elsif r_value = "1110" then
-			value_out	<= x"D";
-		end if;
-		if r_value /= "1111" and strobe_buffer = '0' then
-			strobe_buffer <= '1';
-		else strobe_buffer <= '0';
-		end if;
-	  when DATA_OUT =>
-		if strobe_buffer = '1' then
-			value <= value_out;
-		end if;
-      when others => null;
+      when DATA_OUT =>
+      	output_value(3 downto 0) <= value;
+		output_value(4) <= strobe;
+		when others => null;
     end case;
-    strobe <= strobe_buffer;
-	value <= value_out;
   end process OL;
 end architecture rtl;

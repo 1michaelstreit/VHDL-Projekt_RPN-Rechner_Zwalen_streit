@@ -1,5 +1,5 @@
-Analysis & Elaboration report for rpn_calculator_top
-Tue Jan 07 17:35:35 2020
+Analysis & Synthesis report for rpn_calculator_top
+Tue Jan 21 01:42:38 2020
 Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
 
 
@@ -7,11 +7,18 @@ Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "keypad:Keypad_1"
-  6. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |rpn_calculator_top|keypad:Keypad_1|state_reg
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -36,43 +43,27 @@ agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Jan 07 17:35:35 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 21 01:42:38 2020       ;
 ; Quartus Prime Version              ; 17.0.2 Build 602 07/19/2017 SJ Lite Edition ;
 ; Revision Name                      ; rpn_calculator_top                          ;
 ; Top-level Entity Name              ; rpn_calculator_top                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 61                                          ;
+;     Total combinational functions  ; 53                                          ;
+;     Dedicated logic registers      ; 10                                          ;
+; Total registers                    ; 10                                          ;
+; Total pins                         ; 18                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                      ;
+; Analysis & Synthesis Settings                                                                                        ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -157,54 +148,232 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "keypad:Keypad_1"                                                                      ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; column ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; strobe ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; value  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                          ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../vhdl/rpn_calculator_top.vhd   ; yes             ; User VHDL File  ; C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd ;         ;
+; ../vhdl/Keypad.vhd               ; yes             ; User VHDL File  ; C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd             ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 61          ;
+;                                             ;             ;
+; Total combinational functions               ; 53          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 19          ;
+;     -- 3 input functions                    ; 23          ;
+;     -- <=2 input functions                  ; 11          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 53          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 10          ;
+;     -- Dedicated logic registers            ; 10          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 18          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 10          ;
+; Total fan-out                               ; 225         ;
+; Average fan-out                             ; 2.27        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------------+--------------+
+; |rpn_calculator_top        ; 53 (15)             ; 10 (0)                    ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |rpn_calculator_top                 ; rpn_calculator_top ; work         ;
+;    |keypad:Keypad_1|       ; 38 (38)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rpn_calculator_top|keypad:Keypad_1 ; keypad             ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |rpn_calculator_top|keypad:Keypad_1|state_reg                                                                                                                                                                             ;
++---------------------+--------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+----------------+
+; Name                ; state_reg.DATA_OUT ; state_reg.READ_COL4 ; state_reg.READ_COL3 ; state_reg.READ_COL2 ; state_reg.READ_COL1 ; state_reg.INIT_COL4 ; state_reg.INIT_COL3 ; state_reg.INIT_COL2 ; state_reg.INIT_COL1 ; state_reg.INIT ;
++---------------------+--------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+----------------+
+; state_reg.INIT      ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0              ;
+; state_reg.INIT_COL1 ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1                   ; 1              ;
+; state_reg.INIT_COL2 ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1                   ; 0                   ; 1              ;
+; state_reg.INIT_COL3 ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1                   ; 0                   ; 0                   ; 1              ;
+; state_reg.INIT_COL4 ; 0                  ; 0                   ; 0                   ; 0                   ; 0                   ; 1                   ; 0                   ; 0                   ; 0                   ; 1              ;
+; state_reg.READ_COL1 ; 0                  ; 0                   ; 0                   ; 0                   ; 1                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1              ;
+; state_reg.READ_COL2 ; 0                  ; 0                   ; 0                   ; 1                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1              ;
+; state_reg.READ_COL3 ; 0                  ; 0                   ; 1                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1              ;
+; state_reg.READ_COL4 ; 0                  ; 1                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1              ;
+; state_reg.DATA_OUT  ; 1                  ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1              ;
++---------------------+--------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; keypad:Keypad_1|col[0]                              ; keypad:Keypad_1|WideOr2            ; yes                    ;
+; keypad:Keypad_1|col[1]                              ; keypad:Keypad_1|WideOr2            ; yes                    ;
+; keypad:Keypad_1|col[2]                              ; keypad:Keypad_1|WideOr2            ; yes                    ;
+; keypad:Keypad_1|col[3]                              ; keypad:Keypad_1|WideOr2            ; yes                    ;
+; keypad:Keypad_1|output_value[1]                     ; keypad:Keypad_1|state_reg.DATA_OUT ; yes                    ;
+; keypad:Keypad_1|output_value[2]                     ; keypad:Keypad_1|state_reg.DATA_OUT ; yes                    ;
+; keypad:Keypad_1|output_value[3]                     ; keypad:Keypad_1|state_reg.DATA_OUT ; yes                    ;
+; keypad:Keypad_1|output_value[4]                     ; keypad:Keypad_1|state_reg.DATA_OUT ; yes                    ;
+; keypad:Keypad_1|output_value[0]                     ; keypad:Keypad_1|state_reg.DATA_OUT ; yes                    ;
+; keypad:Keypad_1|value[1]                            ; keypad:Keypad_1|Selector4          ; yes                    ;
+; keypad:Keypad_1|value[2]                            ; keypad:Keypad_1|Selector4          ; yes                    ;
+; keypad:Keypad_1|value[3]                            ; keypad:Keypad_1|Selector4          ; yes                    ;
+; keypad:Keypad_1|strobe                              ; keypad:Keypad_1|Selector14         ; yes                    ;
+; keypad:Keypad_1|value[0]                            ; keypad:Keypad_1|Selector4          ; yes                    ;
+; keypad:Keypad_1|r_row[1]                            ; keypad:Keypad_1|WideOr7            ; yes                    ;
+; keypad:Keypad_1|r_row[0]                            ; keypad:Keypad_1|WideOr7            ; yes                    ;
+; keypad:Keypad_1|r_row[2]                            ; keypad:Keypad_1|WideOr7            ; yes                    ;
+; keypad:Keypad_1|r_row[3]                            ; keypad:Keypad_1|WideOr7            ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                                    ;                        ;
++-----------------------------------------------------+------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 10    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 18                          ;
+; cycloneiii_ff         ; 10                          ;
+;     CLR               ; 10                          ;
+; cycloneiii_lcell_comb ; 54                          ;
+;     normal            ; 54                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 19                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.03                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
-    Info: Processing started: Tue Jan 07 17:35:19 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rpn_calculator -c rpn_calculator_top --analysis_and_elaboration
+    Info: Processing started: Tue Jan 21 01:42:25 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rpn_calculator -c rpn_calculator_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/patri/desktop/bfh/elektronische_systeme/digital/calculator/vhdl-projekt_rpn-rechner_zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd
-    Info (12022): Found design unit 1: rpn_calculator_top-str File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd Line: 26
+    Info (12022): Found design unit 1: rpn_calculator_top-str File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd Line: 28
     Info (12023): Found entity 1: rpn_calculator_top File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd Line: 15
 Info (12021): Found 2 design units, including 1 entities, in source file /users/patri/desktop/bfh/elektronische_systeme/digital/calculator/vhdl-projekt_rpn-rechner_zwalen_streit/rpn_calculator/vhdl/keypad.vhd
-    Info (12022): Found design unit 1: keypad-rtl File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 23
+    Info (12022): Found design unit 1: keypad-rtl File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 22
     Info (12023): Found entity 1: keypad File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 14
 Info (12127): Elaborating entity "rpn_calculator_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at rpn_calculator_top.vhd(28): object "strobe" assigned a value but never read File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd Line: 28
-Warning (10036): Verilog HDL or VHDL warning at rpn_calculator_top.vhd(29): object "value" assigned a value but never read File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd Line: 29
-Info (12129): Elaborating entity "keypad" using architecture "A:rtl" for hierarchy "keypad:Keypad_1" File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd Line: 36
-Warning (10541): VHDL Signal Declaration warning at Keypad.vhd(17): used implicit default value for signal "column" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(93): signal "buttons" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(104): signal "strobe_buffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(109): signal "buttons" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(120): signal "strobe_buffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 120
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(125): signal "buttons" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(136): signal "strobe_buffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(141): signal "buttons" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(152): signal "strobe_buffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(157): signal "strobe_buffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 157
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(158): signal "value_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 158
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(162): signal "strobe_buffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 162
-Warning (10492): VHDL Process Statement warning at Keypad.vhd(163): signal "value_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 163
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Tue Jan 07 17:35:35 2020
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:37
+Info (12129): Elaborating entity "keypad" using architecture "A:rtl" for hierarchy "keypad:Keypad_1" File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at Keypad.vhd(75): signal "strobe" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at Keypad.vhd(98): signal "strobe" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at Keypad.vhd(121): signal "strobe" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 121
+Warning (10631): VHDL Process Statement warning at Keypad.vhd(41): inferring latch(es) for signal or variable "strobe", which holds its previous value in one or more paths through the process File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at Keypad.vhd(41): inferring latch(es) for signal or variable "col", which holds its previous value in one or more paths through the process File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at Keypad.vhd(41): inferring latch(es) for signal or variable "r_row", which holds its previous value in one or more paths through the process File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at Keypad.vhd(41): inferring latch(es) for signal or variable "value", which holds its previous value in one or more paths through the process File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at Keypad.vhd(146): inferring latch(es) for signal or variable "output_value", which holds its previous value in one or more paths through the process File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 146
+Info (10041): Inferred latch for "output_value[0]" at Keypad.vhd(146) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 146
+Info (10041): Inferred latch for "output_value[1]" at Keypad.vhd(146) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 146
+Info (10041): Inferred latch for "output_value[2]" at Keypad.vhd(146) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 146
+Info (10041): Inferred latch for "output_value[3]" at Keypad.vhd(146) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 146
+Info (10041): Inferred latch for "output_value[4]" at Keypad.vhd(146) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 146
+Info (10041): Inferred latch for "value[0]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "value[1]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "value[2]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "value[3]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "r_row[0]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "r_row[1]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "r_row[2]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "r_row[3]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "col[0]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "col[1]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "col[2]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "col[3]" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Info (10041): Inferred latch for "strobe" at Keypad.vhd(41) File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+Warning (13012): Latch keypad:Keypad_1|value[1] has unsafe behavior File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:Keypad_1|state_reg.READ_COL4 File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 26
+Warning (13012): Latch keypad:Keypad_1|value[2] has unsafe behavior File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:Keypad_1|state_reg.READ_COL4 File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 26
+Warning (13012): Latch keypad:Keypad_1|value[3] has unsafe behavior File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:Keypad_1|state_reg.READ_COL4 File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 26
+Warning (13012): Latch keypad:Keypad_1|strobe has unsafe behavior File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:Keypad_1|state_reg.INIT File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 26
+Warning (13012): Latch keypad:Keypad_1|value[0] has unsafe behavior File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 41
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:Keypad_1|state_reg.READ_COL2 File: C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd Line: 26
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 61 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Tue Jan 21 01:42:38 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 
