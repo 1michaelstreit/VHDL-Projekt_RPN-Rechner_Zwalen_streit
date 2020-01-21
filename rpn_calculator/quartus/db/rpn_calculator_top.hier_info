@@ -1,10 +1,10 @@
 |rpn_calculator_top
 clock => keypad:Keypad_1.clk
 reset => keypad:Keypad_1.por
-buttons[0] => keypad:Keypad_1.buttons[0]
-buttons[1] => keypad:Keypad_1.buttons[1]
-buttons[2] => keypad:Keypad_1.buttons[2]
-buttons[3] => keypad:Keypad_1.buttons[3]
+buttons[0] => ~NO_FANOUT~
+buttons[1] => ~NO_FANOUT~
+buttons[2] => ~NO_FANOUT~
+buttons[3] => ~NO_FANOUT~
 
 
 |rpn_calculator_top|keypad:Keypad_1

@@ -1,6 +1,6 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity stack is
 	generic (
@@ -13,7 +13,8 @@ entity stack is
 	     POP	: in std_logic;
 	     Data_Out : out std_logic_vector(WIDTHE-1 downto 0);  --Data popped from the stack.  
 	     Stack_Full : out std_logic;  --Goes high when the stack is full.
-	     Stack_Empty : out std_logic  --Goes high when the stack is empty.
+	     Stack_Empty : out std_logic;  --Goes high when the stack is empty.
+	     SP_debugg : out integer
 	    );
 end stack;
 
@@ -104,7 +105,7 @@ begin
 				end if;
 			end if;
 			SP <= stack_ptr;  --for debugging/simulation.
-
+			SP_debugg <= SP; 
 		end if;
 	end process;
 

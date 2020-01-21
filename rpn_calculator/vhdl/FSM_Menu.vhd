@@ -44,25 +44,29 @@ begin
 			when S_Idle =>
 				if strobe_newButton ='1' and data_in_button < x"A" then
 					state_next <= S_Register;
-					s_add_en <= '0';
+					s_Reg_en <= '0';
 				end if;
 
 				if strobe_newButton ='1' and data_in_button = x"A" then
 					state_next <= S_Addition;
+					s_add_en <= '1';
 					POP <= '1';
 
 				end if;
 
 				if strobe_newButton ='1' and data_in_button = x"B" then
 					state_next <= S_Subtraction;
+					s_sub_en <= '1';
 				end if;
 
 				if strobe_newButton ='1' and data_in_button = x"C" then
 					state_next <= S_Multiplication;
+					s_Mul_en <= '1';
 				end if;
 
 				if strobe_newButton ='1' and data_in_button = x"D" then
 					state_next <= S_Division;
+					s_Div_en <= '1';
 				end if;
 
 				if strobe_newButton ='1' and data_in_button = x"E" then
@@ -76,16 +80,19 @@ begin
 
 			when S_Addition =>
 				state_next <= S_Idle;
-				s_add_en <= '1';
+				s_add_en <= '0';
 				null;
 			when S_Subtraction =>
 				state_next <= S_Idle;
+				s_sub_en <= '0';
 				null;
 			when S_Multiplication =>
 				state_next <= S_Idle;
+				s_Mul_en <= '0';
 				null;
 			when S_Division =>
 				state_next <= S_Idle;
+				s_Div_en <= '0';
 				null;
 			when S_ChangeSign =>
 				state_next <= S_Idle;
@@ -147,8 +154,8 @@ begin
 			NBIT => NBIT
 		)
 		port map(
-			s_Res_en => s_Res_en,
 			s_Reg_en => s_Reg_en,
+			s_Res_en => s_Res_en,
 			clk => clk,
 			rst => rst,
 			data_in_7Seg => data_in_button,
@@ -163,7 +170,7 @@ begin
 		)
 		port map (
 			Clk => clk, Reset => rst,
-			Data_In => data_out,
+			Data_In => s_data_reg,
 			PUSH => PUSH,
 			POP => POP, -- input
 			Data_Out => s_data_stack,
@@ -175,9 +182,9 @@ begin
 	
 	OL :
 		
-	data_out	<= s_data_out when state_reg = S_Idle;
-
-	data_out	<= s_data_stack when state_reg = S_Stack;
+	data_out	<= s_data_reg;
+	
+	data_out(NBIT-1) 	<= s_data_reg(NBIT-1) XOR '1' when state_reg = S_ChangeSign;  -- invert sign
 
 	error 		<= s_error when state_reg = S_Division;
 	
