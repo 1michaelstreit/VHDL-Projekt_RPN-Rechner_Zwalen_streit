@@ -1,0 +1,119 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/sim
+Cd_stack_tb_bench_cfg
+elifo_stack_tb
+abench
+Z1 DEx4 work 5 stack 0 22 87^^H_GKc6G@:cXPOO5Em1
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+DAx4 work 13 lifo_stack_tb 5 bench 22 <=2TW`Ie5Ch?f39aJf1UP0
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 DEx4 work 13 lifo_stack_tb 0 22 eakgLk87j5@oSm=9PgbO32
+Z6 w1579600096
+R0
+Z7 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd
+Z8 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd
+l0
+L93
+V[MDcQVUa=lz3COEYo1id`3
+!s100 53>OlCdQnz02?[k10[^[]3
+Z9 OV;C;10.5b;63
+32
+Z10 !s110 1579600159
+!i10b 0
+Z11 !s108 1579600159.000000
+Z12 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd|
+Z13 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd|
+!i113 1
+Z14 o-work work
+Z15 tExplicit 1 CvgOpt 0
+Elifo_stack_tb
+R6
+R3
+R4
+R0
+R7
+R8
+l0
+L6
+VeakgLk87j5@oSm=9PgbO32
+!s100 a8RTJN2>;X<JohG9nUSFf0
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Abench
+R2
+R1
+R3
+R4
+R5
+l23
+L12
+V<=2TW`Ie5Ch?f39aJf1UP0
+!s100 `VLXoLYozU4ziCk;:=ZTN1
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Estack
+R6
+R2
+R3
+R4
+R0
+Z16 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
+Z17 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
+l0
+L5
+V87^^H_GKc6G@:cXPOO5Em1
+!s100 cG7;IcU0T1CeP8;MXjj@Q3
+R9
+32
+R10
+!i10b 1
+R11
+Z18 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
+Z19 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R2
+R3
+R4
+R1
+l33
+L21
+Z20 ViEX@G[FD9FfNzm=E=@d2c1
+Z21 !s100 gDRm:gl7L2l?G<^;Wd2<30
+R9
+32
+R10
+!i10b 1
+R11
+R18
+R19
+!i113 1
+R14
+R15
