@@ -1,3 +1,12 @@
+-------------------------------------------------------------------------------
+-- Filename 	: Adder_tb.vhd
+-- Title    	: Addierer Test Bench
+-- Author   	: Michael Streit
+-- Date     	: 20.01.2020
+-- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
+-- Notes		: Testet die Addirer entity
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 

@@ -1,3 +1,12 @@
+-------------------------------------------------------------------------------
+-- Filename 	: Subtractor.vhd
+-- Title    	: Subtrahierer
+-- Author   	: Michael Streit
+-- Date     	: 20.01.2020
+-- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
+-- Notes		: Rechnet a-b wird in c ausgegeben
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

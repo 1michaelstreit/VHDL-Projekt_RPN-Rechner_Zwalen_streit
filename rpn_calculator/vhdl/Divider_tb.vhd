@@ -1,3 +1,11 @@
+-------------------------------------------------------------------------------
+-- Filename 	: Divider_tb.vhd
+-- Title    	: Dividerer 
+-- Author   	: Michael Streit
+-- Date     	: 20.01.2020
+-- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
+-- Notes		: Testet die Divider entity
+-------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -22,6 +30,7 @@ begin  -- architecture bench
 
 	ADD: entity work.Divider
 		port map (
+			en => '1',
 			a => a,
 			b => b,
 			c => c);

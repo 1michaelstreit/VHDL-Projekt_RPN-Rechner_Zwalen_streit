@@ -1,3 +1,13 @@
+-------------------------------------------------------------------------------
+-- Filename 	: FSM_Menu.vhd
+-- Title    	: FSM Menu 
+-- Author   	: Michael Streit
+-- Date     	: 20.01.2020
+-- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
+-- Notes		: Steuert den gesammten Rechner konnte mit der Hardware nicht
+--				getestet werden, weil das anzeigen nicht funktioniert
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -20,25 +30,38 @@ architecture RTL of FSM_Menu is
 	signal stack_full, stack_empty	: std_logic;
 	signal PUSH, POP, s_error, s_new_number_input	:std_logic;
 	signal SP_debugg : integer;
-	signal s_data_stack, s_data_out, s_data_result, s_data_reg : std_logic_vector(NBIT-1 downto 0);
-	signal s_data_in_button : std_logic_vector(3 downto 0);
-	signal s_add_en, s_sub_en, s_Mul_en, s_Div_en, s_Sig_en, s_shift_en, s_forward_en, s_Stack_en :std_logic;
+	signal s_data_stack, s_data_result, s_data_reg : std_logic_vector(NBIT-1 downto 0);
+	signal s_add_en, s_sub_en, s_Mul_en, s_Div_en, s_shift_en, s_forward_en, s_Stack_en :std_logic;
 begin
 
 	REG: process(clk, rst) is
 	begin
-		if rst = '1' then
+		if rst = '1' then -- reset
 			state_reg <= S_Idle;
-			data_out <= (others =>'0');
+			--state_next <= S_Idle;
+			--data_out <= (others =>'0');
 			PUSH <= '0';
 			POP <= '0';
+			s_error <= '0';
+			s_new_number_input <= '0';
 			error <= '0';
+			s_data_stack <= (others => '0');
+			s_data_result <= (others => '0');
+			s_data_reg <= (others => '0');
+			s_add_en <= '0';
+			s_sub_en <= '0';
+			s_Mul_en <= '0';
+			s_Div_en <= '0';
+			s_shift_en <= '0';
+			s_forward_en <= '0';
+			s_Stack_en <= '0';
+			
 		elsif rising_edge(clk) then
 			state_reg <= state_next;
 		end if;
 	end process REG;
 
-	NSL: process(strobe_newButton, data_in_button)
+	NSL: process(strobe_newButton, data_in_button, state_reg)
 	begin
 		state_next <= state_reg;
 
@@ -145,12 +168,12 @@ begin
 			b => s_data_reg,
 			c => s_data_result);
 
-	Multiplier : entity work.Divider
+	Multiplier : entity work.Multiplier
 		generic map(
 			NBIT => NBIT
 		)
 		port map(
-			en => s_Div_en,
+			en => s_Mul_en,
 			a => s_data_stack,
 			b => s_data_reg,
 			c => s_data_result);
@@ -173,13 +196,13 @@ begin
 			NBIT => NBIT
 		)
 		port map(
-			s_shift_en => s_shift_en,
-			s_forward_en => s_forward_en,
-			New_Number_Input => s_new_number_input,
 			clk => clk,
 			rst => rst,
-			data_in_7Seg => data_in_button,
-			data_in_Result => s_data_result, 
+			New_Number_Input => s_new_number_input,
+			s_forward_en => s_forward_en,
+			s_shift_en => s_shift_en,
+			data_in_button => data_in_button,
+			data_in_Result => s_data_result,
 			data_out => s_data_reg);
 
 
@@ -189,7 +212,8 @@ begin
 			WIDTHE => NBIT
 		)
 		port map (
-			Clk => clk, Reset => rst,
+			Clk => clk,
+			Reset => rst,
 			Enable => s_Stack_en,
 			Data_In => s_data_reg,
 			PUSH => PUSH,
@@ -203,7 +227,7 @@ begin
 	
 	
 	OL :
-	s_data_result(NBIT-1) 	<= s_data_reg(NBIT-1) XOR '1' when state_reg = S_ChangeSign;	
+	--s_data_result(NBIT-1) 	<= s_data_reg(NBIT-1) XOR '1' when state_reg = S_ChangeSign;	
 		
 	data_out	<= s_data_reg;
 

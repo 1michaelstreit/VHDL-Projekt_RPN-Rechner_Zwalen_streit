@@ -1,3 +1,13 @@
+-------------------------------------------------------------------------------
+-- Filename 	: Divider.vhd
+-- Title    	: Dividerer 
+-- Author   	: Michael Streit
+-- Date     	: 20.01.2020
+-- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
+-- Notes		: Dividiert a/b und gibt das Ergebnis in c aus falls durch 0
+--				dividiert wird wird ein Error signal ausgegeben
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

@@ -1,3 +1,12 @@
+-------------------------------------------------------------------------------
+-- Filename 	: FSM_Menu_tb.vhd
+-- Title    	: FSM Menu Test Bench
+-- Author   	: Michael Streit
+-- Date     	: 20.01.2020
+-- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
+-- Notes		: Testet die FSM: 12 in den stack laden und mit 2 addieren
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 

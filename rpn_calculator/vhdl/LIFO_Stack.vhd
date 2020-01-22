@@ -1,3 +1,16 @@
+-------------------------------------------------------------------------------
+-- Filename 	: LIFO_Stack.vhd
+-- Title    	: LIFO Stack
+-- Author   	: Michael Streit
+-- Date     	: 20.01.2020
+-- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
+-- Notes		: Wert kann mit Push im Stack gespeichert werden und mit Pop
+--				zurück geholt werden. Es wird induziert ob der Stack voll oder
+--				leer ist. Die Breite ist 12 und es können 10 Werte gespeichert 
+--				werden. Die LED anzeige konnte nicht realisert werden, da die
+--				Anzeige nicht funktioniert
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

@@ -8,112 +8,896 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/sim
-Cd_stack_tb_bench_cfg
-elifo_stack_tb
-abench
-Z1 DEx4 work 5 stack 0 22 MThzUIceH]5GgPz^>CW^D1
+Eadder
+Z1 w1579534502
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-DAx4 work 13 lifo_stack_tb 5 bench 22 6TV>hhoM=lHa6nNnU]c801
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z5 DEx4 work 13 lifo_stack_tb 0 22 eakgLk87j5@oSm=9PgbO32
-Z6 w1579613474
 R0
-Z7 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd
-Z8 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd
+Z5 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Adder.vhd
+Z6 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Adder.vhd
+l0
+L5
+VFFY1FMc:o?8ASemg?F8ZR3
+!s100 K:W^eonRVUD<>i>JL?Gz_3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1579633892
+!i10b 1
+Z9 !s108 1579633892.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Adder.vhd|
+Z11 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Adder.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 5 adder 0 22 FFY1FMc:o?8ASemg?F8ZR3
+l18
+L14
+VZbUUSNR7JAn;1i0=BN_nM3
+!s100 =D2AUQFPch@he8KUgfPiA3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eadder_tb
+R1
+R3
+R4
+R0
+Z15 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/adder_tb.vhd
+Z16 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/adder_tb.vhd
+l0
+L6
+VV9V[b0<]:a16cF1WkoeWS2
+!s100 SKQb;Z1_m7[BA5IXIcNS<0
+R7
+32
+Z17 !s110 1579633895
+!i10b 1
+Z18 !s108 1579633895.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/adder_tb.vhd|
+Z20 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/adder_tb.vhd|
+!i113 1
+R12
+R13
+Abench
+R2
+R14
+R3
+R4
+Z21 DEx4 work 8 adder_tb 0 22 V9V[b0<]:a16cF1WkoeWS2
+l22
+L12
+VZdPJE19@kZ`JS6YG1XRIe2
+!s100 FCQ[2VB]R0f_1o3jQ1KEO3
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Cd_adder_tb_bench_cfg
+eadder_tb
+Z22 abench
+R14
+R2
+DAx4 work 8 adder_tb 5 bench 22 ZdPJE19@kZ`JS6YG1XRIe2
+R3
+R4
+R21
+R1
+R0
+R15
+R16
+l0
+L64
+V@I?>P]^TKWIed[BFc^JaN1
+!s100 71[K26hLdKAG?XVXJ^kmG3
+R7
+32
+R17
+!i10b 0
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Cd_divider_tb_bench_cfg
+eDivider_tb
+R22
+Z23 DEx4 work 7 divider 0 22 KjBRd9CoNbm@CG<ceBPJY2
+R2
+DAx4 work 10 divider_tb 5 bench 22 k8[NOWU6fMbHe`h:b_chR3
+R3
+R4
+Z24 DEx4 work 10 divider_tb 0 22 j;7IRP?DzezlT7>4XTCj33
+Z25 w1579633136
+R0
+Z26 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider_tb.vhd
+Z27 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider_tb.vhd
+l0
+L63
+VC0C<<RKiM5h5fL8CYmQoB0
+!s100 1zMm[^4`dXPeA8zA2VM9^0
+R7
+32
+Z28 !s110 1579633793
+!i10b 0
+Z29 !s108 1579633793.000000
+Z30 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider_tb.vhd|
+Z31 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider_tb.vhd|
+!i113 1
+R12
+R13
+Cd_fsm_menu_tb_bench_cfg
+eFSM_Menu_tb
+R22
+Z32 DEx4 work 8 fsm_menu 0 22 GT_mM@Jl0>CCU:HT3V`110
+R2
+DAx4 work 11 fsm_menu_tb 5 bench 22 6oJCGeDZTiS4SNfhHC4b52
+R3
+R4
+Z33 DEx4 work 11 fsm_menu_tb 0 22 89oXN9]CIMG_QODE49c130
+Z34 w1579623160
+R0
+Z35 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/FSM_Menu_tb.vhd
+Z36 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/FSM_Menu_tb.vhd
+l0
+L99
+VBM08`:SKO86;a^d<NYfo51
+!s100 <6;0197G9Tc[bOJ_BD9Sl3
+R7
+32
+Z37 !s110 1579635854
+!i10b 0
+Z38 !s108 1579635854.000000
+Z39 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/FSM_Menu_tb.vhd|
+Z40 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/FSM_Menu_tb.vhd|
+!i113 1
+R12
+R13
+Cd_multiplier_tb_bench_cfg
+eMultiplier_tb
+R22
+R23
+R2
+DAx4 work 13 multiplier_tb 5 bench 22 0b516SM_STSAe_6]Uc5WJ1
+R3
+R4
+Z41 DEx4 work 13 multiplier_tb 0 22 WASY=B_QiU9Pa]03BNM?;3
+Z42 w1579633151
+R0
+Z43 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier_tb.vhd
+Z44 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier_tb.vhd
+l0
+L66
+VHk2U80Kgn^OkPYdJ_L2Ja1
+!s100 HghJN?FgU_@z[GT7=Yfln1
+R7
+32
+R28
+!i10b 0
+R29
+Z45 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier_tb.vhd|
+Z46 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier_tb.vhd|
+!i113 1
+R12
+R13
+Cd_shift_register_tb_bench_cfg
+eShift_Register_tb
+R22
+Z47 DEx4 work 14 shift_register 0 22 ^CDg?95[D[MDZL4KTmF932
+R2
+DAx4 work 17 shift_register_tb 5 bench 22 nG1B_b]XRU^idSJjIh;E73
+R3
+R4
+Z48 DEx4 work 17 shift_register_tb 0 22 aiHZggPVdcWWGODJG;8510
+Z49 w1579691608
+R0
+Z50 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register_tb.vhd
+Z51 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register_tb.vhd
+l0
+L92
+V0;nj]TMS08DDk^2hFeMjP1
+!s100 MfeWo;7mS^eN1gZAV;1Ni1
+R7
+32
+Z52 !s110 1579691616
+!i10b 0
+Z53 !s108 1579691616.000000
+Z54 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register_tb.vhd|
+Z55 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register_tb.vhd|
+!i113 1
+R12
+R13
+Cd_stack_tb_bench_cfg
+elifo_stack_tb
+R22
+Z56 DEx4 work 5 stack 0 22 MThzUIceH]5GgPz^>CW^D1
+R2
+DAx4 work 13 lifo_stack_tb 5 bench 22 6TV>hhoM=lHa6nNnU]c801
+R3
+R4
+Z57 DEx4 work 13 lifo_stack_tb 0 22 eakgLk87j5@oSm=9PgbO32
+Z58 w1579613474
+R0
+Z59 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd
+Z60 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd
 l0
 L132
 Vzco6ZOJjWzJYZG]S0PhQ10
 !s100 F^Bmd39:kdni?3B<SAPSR2
-Z9 OV;C;10.5b;63
+R7
 32
-Z10 !s110 1579613669
+R28
 !i10b 0
-Z11 !s108 1579613669.000000
-Z12 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd|
-Z13 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd|
+R29
+Z61 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd|
+Z62 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack_tb.vhd|
 !i113 1
-Z14 o-work work
-Z15 tExplicit 1 CvgOpt 0
-Elifo_stack_tb
-R6
+R12
+R13
+Cd_subtractor_tb_bench_cfg
+esubtractor_tb
+R22
+Z63 DEx4 work 10 subtractor 0 22 3^[QG9c_d6_V@2a>L6bKI1
+R2
+DAx4 work 13 subtractor_tb 5 bench 22 OJ]22d1;j5oRXN>8bf?ad3
+R3
+R4
+Z64 DEx4 work 13 subtractor_tb 0 22 7jYkMW2]4Oi`HeK9Y9a5Q2
+Z65 w1579633668
+R0
+Z66 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor_tb.vhd
+Z67 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor_tb.vhd
+l0
+L63
+V1zKT`An]QEJb<?INM14fX0
+!s100 VK4lOYVS_oDaSfO>RSkU50
+R7
+32
+Z68 !s110 1579633879
+!i10b 0
+Z69 !s108 1579633879.000000
+Z70 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor_tb.vhd|
+Z71 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor_tb.vhd|
+!i113 1
+R12
+R13
+Edivider
+Z72 w1579624058
+R2
 R3
 R4
 R0
+Z73 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider.vhd
+Z74 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider.vhd
+l0
+L5
+VKjBRd9CoNbm@CG<ceBPJY2
+!s100 9IMV_AYfIz_`4M[8;W=TI0
 R7
-R8
+32
+Z75 !s110 1579633897
+!i10b 1
+Z76 !s108 1579633897.000000
+Z77 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider.vhd|
+Z78 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Divider.vhd|
+!i113 1
+R12
+R13
+Abehave_unsigned
+R2
+R3
+R4
+R23
+l20
+L16
+VjWe=?NB15MG9DL:DWZlml1
+!s100 A@2aE2KLjANOPTgaT4Qi@3
+R7
+32
+R75
+!i10b 1
+R76
+R77
+R78
+!i113 1
+R12
+R13
+Edivider_tb
+R25
+R3
+R4
+R0
+R26
+R27
+l0
+L6
+Vj;7IRP?DzezlT7>4XTCj33
+!s100 ebXiPTLIMnZT3aGEmn7ib1
+R7
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R12
+R13
+Abench
+R2
+R23
+R3
+R4
+R24
+l21
+L12
+Vk8[NOWU6fMbHe`h:b_chR3
+!s100 RDB6=KSA8I4Me5a;WG:z;1
+R7
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R12
+R13
+Efsm_menu
+Z79 w1579635901
+R2
+R3
+R4
+R0
+Z80 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/FSM_Menu.vhd
+Z81 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/FSM_Menu.vhd
+l0
+L5
+VGT_mM@Jl0>CCU:HT3V`110
+!s100 CXa6<`CdzN5b@AzjXNT`M2
+R7
+32
+Z82 !s110 1579635910
+!i10b 1
+Z83 !s108 1579635910.000000
+Z84 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/FSM_Menu.vhd|
+Z85 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/FSM_Menu.vhd|
+!i113 1
+R12
+R13
+Artl
+R56
+DEx4 work 14 shift_register 0 22 6=HaD`?[EgdD_TE?G[n6h0
+R23
+Z86 DEx4 work 10 multiplier 0 22 kBO6L`PE2Q]Z5?m6d7Zif1
+R63
+R14
+R2
+R3
+R4
+R32
+l25
+L17
+V4I??EjLdXWU2o@WHcQb<K2
+!s100 HI_1LFz3LBHLOEMGlA:b]0
+R7
+32
+R82
+!i10b 1
+R83
+R84
+R85
+!i113 1
+R12
+R13
+Efsm_menu_tb
+R34
+R3
+R4
+R0
+R35
+R36
+l0
+L6
+V89oXN9]CIMG_QODE49c130
+!s100 cF_^NX;Deb;ml6dWJF5>H1
+R7
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R12
+R13
+Abench
+R2
+R32
+R3
+R4
+R33
+l22
+L12
+V6oJCGeDZTiS4SNfhHC4b52
+!s100 @Li`AOX]bOB[O3fPgNUVd2
+R7
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R12
+R13
+Ekeypad
+Z87 w1579602926
+R2
+R3
+R4
+R0
+Z88 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd
+Z89 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd
+l0
+L14
+Vfe_g]QW[:1@8zAX5SB7=[2
+!s100 oNna9V]M;i1i;J7=l2YH52
+R7
+32
+R28
+!i10b 1
+R29
+Z90 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd|
+Z91 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Keypad.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+Z92 DEx4 work 6 keypad 0 22 fe_g]QW[:1@8zAX5SB7=[2
+l32
+L23
+VInl3zOS4iTg=`fjo30fGb1
+!s100 2N[28Ob:@VfJF_;:Od_6E3
+R7
+32
+R28
+!i10b 1
+R29
+R90
+R91
+!i113 1
+R12
+R13
+Elifo_stack_tb
+R58
+R3
+R4
+R0
+R59
+R60
 l0
 L6
 VeakgLk87j5@oSm=9PgbO32
 !s100 a8RTJN2>;X<JohG9nUSFf0
-R9
+R7
 32
-R10
+R28
 !i10b 1
-R11
+R29
+R61
+R62
+!i113 1
 R12
 R13
-!i113 1
-R14
-R15
 Abench
 R2
-R1
+R56
 R3
 R4
-R5
+R57
 l24
 L12
 V6TV>hhoM=lHa6nNnU]c801
 !s100 [^dKOzi4FMCIkE7aB>d7[1
-R9
+R7
 32
-R10
+R28
 !i10b 1
-R11
+R29
+R61
+R62
+!i113 1
 R12
 R13
-!i113 1
-R14
-R15
-Estack
-Z16 w1579613651
+Emultiplier
+Z93 w1579623944
 R2
 R3
 R4
 R0
-Z17 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
-Z18 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
+Z94 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier.vhd
+Z95 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier.vhd
+l0
+L5
+VkBO6L`PE2Q]Z5?m6d7Zif1
+!s100 Ve;cCJW44gc@5WmJ?_^PD2
+R7
+32
+Z96 !s110 1579633906
+!i10b 1
+Z97 !s108 1579633906.000000
+Z98 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier.vhd|
+Z99 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Multiplier.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+R86
+l18
+L14
+VHjZhQ>QR46Q7l:3M=JIjI1
+!s100 ieGalbja[lNEBc6HiNNKU1
+R7
+32
+R96
+!i10b 1
+R97
+R98
+R99
+!i113 1
+R12
+R13
+Emultiplier_tb
+R42
+R3
+R4
+R0
+R43
+R44
+l0
+L6
+VWASY=B_QiU9Pa]03BNM?;3
+!s100 H2Zc`P1J]`4ogJYVgc4Wh0
+R7
+32
+R28
+!i10b 1
+R29
+R45
+R46
+!i113 1
+R12
+R13
+Abench
+R2
+R23
+R3
+R4
+R41
+l21
+L12
+V0b516SM_STSAe_6]Uc5WJ1
+!s100 eeO_=k<Ef]M3Bam]<6z0F3
+R7
+32
+R28
+!i10b 1
+R29
+R45
+R46
+!i113 1
+R12
+R13
+Erpn_calculator_top
+R87
+R2
+R3
+R4
+R0
+Z100 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd
+Z101 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd
+l0
+L15
+Vgh:fQiO7_0bzaM@74UfcO3
+!s100 ROciQCM1:znzin_?QSPTY1
+R7
+32
+R28
+!i10b 1
+R29
+Z102 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd|
+Z103 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/rpn_calculator_top.vhd|
+!i113 1
+R12
+R13
+Astr
+R92
+R2
+R3
+R4
+DEx4 work 18 rpn_calculator_top 0 22 gh:fQiO7_0bzaM@74UfcO3
+l31
+L26
+V[Pjh;no`DlIZSPNA:7Xb_1
+!s100 2o]?8lWcJQ75@7[9FAYW:0
+R7
+32
+R28
+!i10b 1
+R29
+R102
+R103
+!i113 1
+R12
+R13
+Eshift_register
+Z104 w1579691824
+R2
+R3
+R4
+R0
+Z105 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register.vhd
+Z106 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register.vhd
+l0
+L5
+V^CDg?95[D[MDZL4KTmF932
+!s100 7iL^5dSJX]gB09`MMQIki1
+R7
+32
+!s110 1579691833
+!i10b 1
+!s108 1579691833.000000
+Z107 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register.vhd|
+!s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+R47
+l20
+L18
+Vm`@9AijLWCI_j[j7`DZAY1
+!s100 <`f:S5<mYi]mmIeaPcaJj2
+R7
+32
+!s110 1579691764
+!i10b 1
+!s108 1579691764.000000
+R107
+!s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Shift_Register.vhd|
+!i113 1
+R12
+R13
+Eshift_register_tb
+R49
+R3
+R4
+R0
+R50
+R51
+l0
+L6
+VaiHZggPVdcWWGODJG;8510
+!s100 <MacFZni>kMNk35HAUNBJ0
+R7
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R12
+R13
+Abench
+R2
+R47
+R3
+R4
+R48
+l24
+L13
+VnG1B_b]XRU^idSJjIh;E73
+!s100 16R72Z0?P3>6;g@nTIaRe3
+R7
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R12
+R13
+Esigned_magnitude
+Z108 w1579534540
+R2
+R3
+R4
+R0
+Z109 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Signed_Magnitude.vhd
+Z110 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Signed_Magnitude.vhd
+l0
+L5
+V<N0PnaHi`AKI__i7ni<><3
+!s100 _gzUU@28ENZ6ZfcFfXKg40
+R7
+32
+Z111 !s110 1579633915
+!i10b 1
+Z112 !s108 1579633915.000000
+Z113 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Signed_Magnitude.vhd|
+Z114 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Signed_Magnitude.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 16 signed_magnitude 0 22 <N0PnaHi`AKI__i7ni<><3
+l14
+L12
+V2fO92c7]Dd^bV0^b<FAbG1
+!s100 S2jE6LUGnCJ85VLo8Y]Tf3
+R7
+32
+R111
+!i10b 1
+R112
+R113
+R114
+!i113 1
+R12
+R13
+Estack
+Z115 w1579613833
+R2
+R3
+R4
+R0
+Z116 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
+Z117 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd
 l0
 L5
 VMThzUIceH]5GgPz^>CW^D1
 !s100 cBo0DWc4>743FhW52nSJE2
-R9
+R7
 32
-Z19 !s110 1579613671
+Z118 !s110 1579633904
 !i10b 1
-Z20 !s108 1579613671.000000
-Z21 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
-Z22 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
+Z119 !s108 1579633904.000000
+Z120 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
+Z121 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/LIFO_Stack.vhd|
 !i113 1
-R14
-R15
+R12
+R13
 Abehavioral
 R2
 R3
 R4
-R1
+R56
 l33
 L22
-Z23 VbR3WM68QcRRNQhQGXTcWO0
-Z24 !s100 5So6:<UJ`kRN3:<ET0SO=2
-R9
+VMoz^=<E36A`WS?hFF:>Qi0
+!s100 l@OZ7DP:>DGA?ha;l9ZeU1
+R7
 32
-R19
+R118
 !i10b 1
-R20
-R21
-R22
+R119
+R120
+R121
 !i113 1
-R14
-R15
+R12
+R13
+Esubtractor
+Z122 w1579623943
+R2
+R3
+R4
+R0
+Z123 8C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd
+Z124 FC:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd
+l0
+L5
+V3^[QG9c_d6_V@2a>L6bKI1
+!s100 hMhWkYE@2HoQo4hbHB0d[0
+R7
+32
+Z125 !s110 1579633917
+!i10b 1
+Z126 !s108 1579633917.000000
+Z127 !s90 -reportprogress|300|-work|work|C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd|
+Z128 !s107 C:/Development/VHDL/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl/Subtractor.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+R63
+l17
+L14
+Vlf6=?mk11z5V5zlJOLQS11
+!s100 eJb6o:L5AHaBifY4F_?[Q0
+R7
+32
+R125
+!i10b 1
+R126
+R127
+R128
+!i113 1
+R12
+R13
+Esubtractor_tb
+R65
+R3
+R4
+R0
+R66
+R67
+l0
+L6
+V7jYkMW2]4Oi`HeK9Y9a5Q2
+!s100 O2CX8SobcaE]hW6L>=eo82
+R7
+32
+R68
+!i10b 1
+R69
+R70
+R71
+!i113 1
+R12
+R13
+Abench
+R2
+R63
+R3
+R4
+R64
+l21
+L12
+VOJ]22d1;j5oRXN>8bf?ad3
+!s100 cWE1GT3ZoNGC19kQI^Ikf3
+R7
+32
+R68
+!i10b 1
+R69
+R70
+R71
+!i113 1
+R12
+R13
