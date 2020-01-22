@@ -73,10 +73,10 @@ begin
   		state_next <= INIT_COL2;
   	when INIT_COL2 =>
   		col <= "1101";
+  		r_row <= "1111";
   		state_next <= READ_COL2;
   	when READ_COL2 =>
   		r_row <= row;
-  		r_row <= "1111";
   		if strobe = '0' then
 	  		case r_row is
   				when "1110" =>

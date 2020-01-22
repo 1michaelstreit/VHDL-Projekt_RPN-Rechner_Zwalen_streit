@@ -4,8 +4,7 @@
 -- Author   	: Patrick Zwahlen
 -- Date     	: 20.01.2020
 -- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
--- Notes		: This Testbench doesn't work as expected.
---				  The waiting periods inbetween the loops should help to skip 
+-- Notes		: The waiting periods inbetween the loops are used to skip 
 --				  the colums befor, but it only works once and repeats column 1
 --				  in other cases.
 -------------------------------------------------------------------------------
@@ -57,37 +56,51 @@ begin  -- architecture bench
 		-- wait for first clock
 		wait for 0.5 * CLK_PERIOD;
 
+		-- test column1
         for i in 0 to 3 loop            
-			input(i) <= '0';			
+			input(i) <= '0';
+			-- wait for end of FSM
 			wait for 10 * CLK_PERIOD;                
             input <= "1111";
         end loop;
 		
-		-- wait to skip the second column
-		wait for 3 * CLK_PERIOD;
+		-- wait to skip the first column
+		wait for 4 * CLK_PERIOD;
 		
+		-- test column2
 		for i in 0 to 3 loop       		
-			input(i) <= '0';			
-			wait for 10 * CLK_PERIOD;              
-            input <= "1111";
+			input(i) <= '0';	
+			-- wait for end of FSM		
+			wait for 8 * CLK_PERIOD;                
+            input <= "1111";	
+			-- wait to skip the first column		
+			wait for 2 * CLK_PERIOD;
         end loop;
 		
-		-- wait to skip the second column
+		-- wait to skip the columns 1 and 2
 		wait for 2 * CLK_PERIOD;
 
+		-- test column3
         for i in 0 to 3 loop            
-			input(i) <= '0';			
-			wait for 10 * CLK_PERIOD;                
+			input(i) <= '0';		
+			-- wait for end of FSM	
+			wait for 6 * CLK_PERIOD;                
             input <= "1111";
+			-- wait to skip the columns 1 and 2			
+			wait for 4 * CLK_PERIOD;
         end loop;
 		
-		-- wait to skip the third column
+		-- wait to skip the columns 1, 2 and 3
 		wait for 2 * CLK_PERIOD;
 
+		-- test column4
         for i in 0 to 3 loop            
-			input(i) <= '0';			
-			wait for 10 * CLK_PERIOD;                
+			input(i) <= '0';	
+			-- wait for end of FSM		
+			wait for 4 * CLK_PERIOD;                
             input <= "1111";
+			-- wait to skip the columns 1, 2 and 3			
+			wait for 6 * CLK_PERIOD;
         end loop;
 		
 		-- wait for last value
