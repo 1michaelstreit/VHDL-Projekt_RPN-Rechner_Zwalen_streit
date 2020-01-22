@@ -1,0 +1,13 @@
+
+State Machine - |rpn_calculator_top|keypad:Keypad_1|state_reg
+Name state_reg.DATA_OUT state_reg.READ_COL4 state_reg.READ_COL3 state_reg.READ_COL2 state_reg.READ_COL1 state_reg.INIT_COL4 state_reg.INIT_COL3 state_reg.INIT_COL2 state_reg.INIT_COL1 state_reg.INIT 
+state_reg.INIT 0 0 0 0 0 0 0 0 0 0 
+state_reg.INIT_COL1 0 0 0 0 0 0 0 0 1 1 
+state_reg.INIT_COL2 0 0 0 0 0 0 0 1 0 1 
+state_reg.INIT_COL3 0 0 0 0 0 0 1 0 0 1 
+state_reg.INIT_COL4 0 0 0 0 0 1 0 0 0 1 
+state_reg.READ_COL1 0 0 0 0 1 0 0 0 0 1 
+state_reg.READ_COL2 0 0 0 1 0 0 0 0 0 1 
+state_reg.READ_COL3 0 0 1 0 0 0 0 0 0 1 
+state_reg.READ_COL4 0 1 0 0 0 0 0 0 0 1 
+state_reg.DATA_OUT 1 0 0 0 0 0 0 0 0 1 

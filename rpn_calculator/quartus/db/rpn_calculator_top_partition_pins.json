@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "kp_column[0]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_column[1]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_column[2]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_column[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segment1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segment1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segment1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segment1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segment1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segment1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "led_matrix1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "kp_row[0]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_row[1]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_row[2]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_row[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

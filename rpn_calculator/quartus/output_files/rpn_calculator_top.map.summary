@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Jan 21 01:42:38 2020
+Analysis & Synthesis Status : Successful - Wed Jan 22 02:16:40 2020
 Quartus Prime Version : 17.0.2 Build 602 07/19/2017 SJ Lite Edition
 Revision Name : rpn_calculator_top
 Top-level Entity Name : rpn_calculator_top
 Family : Cyclone IV E
-Total logic elements : 61
-    Total combinational functions : 53
+Total logic elements : 66
+    Total combinational functions : 58
     Dedicated logic registers : 10
 Total registers : 10
-Total pins : 18
+Total pins : 54
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
