@@ -2,7 +2,32 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "kp_column[0]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_column[1]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_column[2]",
+					"strict" : false
+				},
+				{
+					"name" : "kp_column[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

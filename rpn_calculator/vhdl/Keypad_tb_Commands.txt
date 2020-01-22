@@ -1,0 +1,34 @@
+#-------------------------------------------------------------------------------
+#-- Filename 	: Keypad_tb_Commands.txt
+#-- Title    	: Keypad Testbench Commands 
+#-- Author   	: Patrick Zwahlen
+#-- Date     	: 20.01.2020
+#-- Projectname	: VHDL-Projekt_RPN-Rechner_Zwahlen_Streit
+#-- Note		: Commands to start the keypad testbench.
+#-------------------------------------------------------------------------------
+
+cd C:/Users/patri/Desktop/BFH/Elektronische_Systeme/Digital/Calculator/VHDL-Projekt_RPN-Rechner_Zwalen_streit/rpn_calculator/vhdl
+
+#create work folder
+#vlib keypad
+vmap work keypad
+
+#compile files
+vcom Keypad.vhd
+vcom Keypad_tb.vhd
+
+#funktioniert noch nicht TBD
+vsim -gui work.Keypad_tb -t ns
+add wave -position end  sim:/keypad_tb/input
+add wave -position end  sim:/keypad_tb/output
+add wave -position end  sim:/keypad_tb/res
+add wave -position end  sim:/keypad_tb/rst_b
+add wave -position end  sim:/keypad_tb/press
+add wave -position end  sim:/keypad_tb/clk
+
+run -all
+wave zoom full
+
+
+quit -sim
+
